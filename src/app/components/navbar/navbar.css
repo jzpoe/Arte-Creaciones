@@ -1,0 +1,44 @@
+.navbar {
+  background-color: #5d3a3a	;
+  color: #5d3a3a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #D7CCC8	;
+  text-decoration: none;
+}
+
+.navLinks {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navLinks li a {
+  color: #D7CCC8;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLinks li a:hover {
+  color: #b36b6b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navLinks {
+    display: none; /* para versión simple sin menú móvil */
+  }
+}

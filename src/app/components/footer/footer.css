@@ -1,0 +1,29 @@
+.footer {
+  background-color: #C8AD7F	;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+}
+
+.links {
+  margin-top: 10px;
+}
+
+.links a {
+  margin: 0 10px;
+  color: #5d3a3a	;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.links a:hover {
+  color: #C8AD7F	;
+}

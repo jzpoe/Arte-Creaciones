@@ -1,0 +1,19 @@
+.container-centro {
+  padding-top: 80px; /* Ajusta este valor según la altura de tu Navbar */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.imagen {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
