@@ -16,4 +16,10 @@
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.imagen:hover {
+  transform: scale(1.05); /* agranda un poco la imagen */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* sombra más grande para dar efecto de elevación */
 }

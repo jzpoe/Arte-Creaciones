@@ -1,30 +1,53 @@
+'use client';
+
+import { useState } from 'react';
 import centro from './centro.css';
 import Image from 'next/image';
+import { Modal } from '../modal/Modal';
 
 export const Centro = () => {
+  const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
 
+  const imagenes = [
+    {
+      src: '/imgbody/arte pinceles.jpg',
+      historia: 'Una obra que refleja el inicio de nuestra pasión por el arte.',
+    },
+    {
+      src: '/imgbody/pinceles.jpg',
+      historia: 'Los pinceles representan las herramientas de libertad creativa.',
+    },
+    {
+      src: '/imgbody/pituras.jpg',
+      historia: 'Las pinturas vibrantes muestran la energía del color.',
+    },
+    {
+      src: '/imgbody/vinilos.jpg',
+      historia: 'Vinilos y texturas únicas que adornan nuestros murales.',
+    },
+    // Puedes duplicar o agregar más
+  ];
 
-    const imagenes = [
-        '/imgbody/arte pinceles.jpg',
-        '/imgbody/pinceles.jpg',
-        '/imgbody/pituras.jpg',
-        '/imgbody/vinilos.jpg',
-        '/imgbody/arte pinceles.jpg',
-        '/imgbody/pinceles.jpg',
-        '/imgbody/pituras.jpg',
-        '/imgbody/vinilos.jpg',
-    ]
-
-    return (
-        <div className="container-centro">
+  return (
+    <div className="container-centro">
       <h2>Galería del Centro</h2>
       <div className="galeria">
-        {imagenes.map((src, index) => (
+        {imagenes.map((img, index) => (
           <div className="imagen" key={index}>
-            <Image src={src} alt={`Imagen ${index + 1}`} width={300} height={200} />
+            <button onClick={() => setImagenSeleccionada(img)}>
+              <Image src={img.src} alt={`Imagen ${index + 1}`} width={300} height={200} />
+            </button>
           </div>
         ))}
       </div>
+
+      {imagenSeleccionada && (
+        <Modal
+          src={imagenSeleccionada.src}
+          historia={imagenSeleccionada.historia}
+          onClose={() => setImagenSeleccionada(null)}
+        />
+      )}
     </div>
-    )
-}
+  );
+};
