@@ -37,7 +37,9 @@ export const Centro = () => {
       <CentroMensaje/>
       <Tex/>
       <Experiencia/> 
+      <h2 className='info-imagenes' >Mas info click en imagenes</h2>
       <div className="galeria">
+        
         {imagenes.map((img, index) => (
           <div className="imagen" key={index}>
             <button onClick={() => setImagenSeleccionada(img)}>
