@@ -5,7 +5,7 @@ export const BotonWhatsapp = () => {
   const numeroWhatsApp = '573001234567'; // Cambia por tu número real (con código de país sin "+")
 
   const mensaje = 'Hola, estoy interesado en recibir más información sobre los trabajos escolares.';
-  const enlace = `https://wa.me/${+573206813735}?text=${encodeURIComponent(mensaje)}`;
+  const enlace = `https://wa.me/${3057767694}?text=${encodeURIComponent(mensaje)}`;
 
   return (
     <div className="whatsapp-container">
