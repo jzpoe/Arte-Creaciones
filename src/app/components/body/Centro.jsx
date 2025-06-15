@@ -4,6 +4,10 @@ import { useState } from 'react';
 import centro from './centro.css';
 import Image from 'next/image';
 import { Modal } from '../modal/Modal';
+import { Tex } from '../texto/Tex';
+import { Experiencia } from '../experiencia/Experiencia';
+import { BotonWhatsapp } from '../BotonWhatsapp/BotonWhatsapp';
+import { CentroMensaje } from '../mensajecentro/CentroMensaje';
 
 export const Centro = () => {
   const [imagenSeleccionada, setImagenSeleccionada] = useState(null);
@@ -30,7 +34,9 @@ export const Centro = () => {
 
   return (
     <div className="container-centro">
-      <h2>Galería del Centro</h2>
+      <CentroMensaje/>
+      <Tex/>
+      <Experiencia/> 
       <div className="galeria">
         {imagenes.map((img, index) => (
           <div className="imagen" key={index}>
@@ -48,6 +54,10 @@ export const Centro = () => {
           onClose={() => setImagenSeleccionada(null)}
         />
       )}
+      
+      <BotonWhatsapp/>
     </div>
+
+   
   );
 };

@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className='footer'>
       <div className="container">
-        <p>&copy; {new Date().getFullYear()} Cunec LTDA. Todos los derechos reservados.</p>
+        <p>&copy; {new Date().getFullYear()} ArtCreaciones LTDA. Todos los derechos reservados.</p>
         <div className="links">
           <a href="/nosotros">Nosotros</a>
           <a href="/servicios">Servicios</a>

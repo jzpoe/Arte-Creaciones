@@ -1,11 +1,15 @@
 import Link from 'next/link';
-import navbar from './navbar.css';
+import Image from 'next/image';
+import './navbar.css';
 
 export const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Link href="/">Cunec</Link>
+        <Link href="/">
+          {/* Imagen como logo */}
+          <Image src="/imgbody/logo.png" alt="Logo" width={50} height={50} />
+        </Link>
       </div>
       <ul className="navLinks">
         <li><Link href="/">Inicio</Link></li>
@@ -14,5 +18,5 @@ export const Navbar = () => {
         <li><Link href="/contacto">Contacto</Link></li>
       </ul>
     </nav>
-  )
-}
+  );
+};

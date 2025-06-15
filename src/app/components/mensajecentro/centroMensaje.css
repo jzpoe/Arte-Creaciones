@@ -1,0 +1,36 @@
+@keyframes arcoiris {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.card-mensaje {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 16px;
+  max-width: 900px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.card-mensaje h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(270deg, #ff4e50, #f9d423, #24fe41, #00c6ff, #8e2de2, #ff4e50);
+  background-size: 1000% 1000%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: arcoiris 5s linear infinite;
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .card-mensaje {
+    padding: 1.5rem 1rem;
+  }
+
+  .card-mensaje h2 {
+    font-size: 1.4rem;
+  }
+}

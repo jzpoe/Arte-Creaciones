@@ -1,0 +1,113 @@
+/* Estilos base (ya los tienes) */
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+  background-color: #ba68c8; /* Lavanda fuerte */
+  border-radius: 10px;
+}
+
+.bloque {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.bloque.invertido {
+  flex-direction: row-reverse;
+}
+
+.texto {
+  flex: 1;
+  font-size: 1.2rem;
+  color: #333;
+  padding: 2rem;
+  max-width: 500px;
+}
+.palabra {
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-shadow: 0 0 2px #000;
+  display: inline-block;
+}
+
+.imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  background-color: #34495e;
+  
+}
+
+/* Colores primarios */
+.letra.rojo {
+  color: red;
+}
+
+.letra.azul {
+  color: blue;
+}
+
+.letra.amarillo {
+  color: #fdd835; /* Amarillo fuerte y visible */
+}
+.letra {
+ font-size: 1.3rem;             /* Tamaño moderado para buena lectura */
+  font-weight: 600;              /* Negrita pero no exagerada */
+  display: inline-block;
+  letter-spacing: 1px;           /* Separación sutil */
+  margin: 0 0.5px;               /* Espacio ajustado entre letras */
+  text-shadow: 0 0 2px #000;     /* Sombra suave para mejorar contraste */
+  line-height: 1.4;              /* Mejora la altura en párrafos */
+
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,  
+    -1px  1px 0 #000,  
+     1px  1px 0 #000;
+  
+}
+
+
+/* 🔻 Estilos responsive para pantallas menores de 768px */
+@media screen and (max-width: 768px) {
+  .bloque {
+    flex-direction: column !important; /* Reemplaza tanto normal como invertido */
+    text-align: center;
+  }
+
+  .texto, .imagen {
+    flex: unset;
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+  }
+
+  .texto {
+    font-size: 1rem;
+  }
+
+  .imagen img {
+    width: 100%;
+    height: auto;
+    max-width: 90vw; /* Evita que la imagen se desborde */
+    border-radius: 10px;
+  }
+}
+
+/* 🔻 Estilos para pantallas ultra pequeñas (menos de 480px) */
+@media screen and (max-width: 480px) {
+  .texto {
+    font-size: 0.95rem;
+  }
+
+  .contenedor-principal {
+    padding: 1rem;
+  }
+
+  .imagen img {
+    max-width: 100%;
+  }
+}

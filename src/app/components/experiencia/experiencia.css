@@ -1,0 +1,57 @@
+.experiencia {
+  background-color: #ffffffee; /* blanco con transparencia */
+  border-radius: 12px;
+  padding: 3rem 2rem;
+  margin: 2rem auto;
+  max-width: 1000px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+.experiencia h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #8e44ad, #3498db);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.experiencia p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+/* Responsive para tablets y móviles */
+@media screen and (max-width: 768px) {
+  .experiencia {
+    padding: 2rem 1.5rem;
+  }
+
+  .experiencia h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .experiencia p {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .experiencia {
+    padding: 1.5rem 1rem;
+  }
+
+  .experiencia h2 {
+    font-size: 1.4rem;
+  }
+
+  .experiencia p {
+    font-size: 0.95rem;
+  }
+}
